@@ -9,7 +9,7 @@ const generateHomePage = () => {
     // page logo
     const logo = document.createElement('img');
     logo.classList.add('logo');
-    logo.src = "../images/rnlogo.jpeg";
+    // logo.src = "./images/rnlogo.jpeg";
 
     // home page header
     const header = document.createElement('h1');
