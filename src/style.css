@@ -1,0 +1,144 @@
+:root{
+    --default: #323232;
+    --brown: #CBB279;
+    --lightBrown: #E1D4BB;
+    --white: #EEEEEE;
+}
+
+*{
+    box-sizing: border-box;
+    color: var(--default);
+    cursor: default;
+    margin: 0;
+    padding: 0;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar, button, .display, footer{
+    background-color: var(--lightBrown);
+}
+
+.navbar{
+    border-bottom: solid 1px var(--brown);
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+button{
+    border-style: none;
+    font-size: 1rem;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+/* content container */
+.display, .custom{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6rem;
+    gap: 1rem;
+}
+
+.custom{
+    padding-top: 1rem;
+}
+
+/* home page */
+.logo{
+    border-radius: 10px;
+    box-shadow: .5rem .5rem .4rem 0;
+    height: 250px;
+}
+
+/* menu page */
+.menuContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 80vw;
+    gap: 1rem;
+}
+
+.menuItems{
+    background-color: var(--default);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuItems > h3{
+    color: var(--brown);
+    border-bottom: solid 1px var(--brown);
+}
+
+.items{
+    padding: 1rem 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name > p{
+    color: var(--brown);
+}
+
+.price > p{
+    color: var(--brown);
+}
+
+/* contact page */
+.contactInfo{
+    background-color: var(--default);
+    border-radius: 5px;
+    padding: 1rem;
+    line-height: 2;
+    text-align: center;
+}
+
+.info{
+    color: var(--brown);
+}
+
+footer{
+    border-top: solid 1px var(--brown);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 1rem;
+    width: 100%;
+    color: var(--default);
+}
+
+a{
+    text-decoration: none;
+    color: var(--default);
+}
+
+a:hover{
+    cursor: pointer;
+    color: var(--white);
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1164px) {
+    .expandMenu{
+        grid-column: span 2;
+    }
+}
